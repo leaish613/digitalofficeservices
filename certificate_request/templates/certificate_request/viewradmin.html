@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <table border="1">
+        <tr>
+            <td>Sl.No</td>
+            <td>Date</td>
+            <td>Certificate Name</td>
+            <td>Student Name</td>
+            <td>Need</td>
+            <td>Faculty</td>
+
+            <td></td>
+        </tr>
+    {% for i in kk %}
+        <tr>
+            <td>{{ i.r_id }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.c_id }}</td>
+            <td>{{ i.s_id }}</td>
+            <td>{{ i.need }}</td>
+            <td>{{ i.f_id }}</td>
+            <td></td>
+            <td><a href="/crequest/send/{{ i.r_id }}">Approve</a><br>
+            <a href="/crequest/rejectadmin/{{ i.r_id }}">Reject</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>

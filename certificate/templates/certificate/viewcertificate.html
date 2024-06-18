@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <table border="1">
+        <tr>
+            <td>sl.No</td>
+            <td>Certificate</td>
+            <td></td>
+        </tr>
+         {% for i in a %}
+        <tr>
+            <td>{{ i.c_id }}</td>
+            <td>{{ i.name }}</td>
+            <td><a href="/crequest/req/{{ i.c_id }}">Request</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>
